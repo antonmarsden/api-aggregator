@@ -1,7 +1,7 @@
 {
   "name": "api-aggregator",
   "version": "1.0.0",
-  "repository" : "",
+  "repository": "",
   "description": "An API gateway that provides rate limiting and caching for configurable endpoints",
   "main": "app.js",
   "scripts": {
@@ -29,8 +29,6 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
-    "concurrently": "^3.5.1",
-    "eslint": "^4.19.1",
-    "opener": "^1.4.3"
+    "eslint": "^4.19.1"
   }
 }
