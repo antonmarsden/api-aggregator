@@ -1,13 +1,20 @@
 # api-aggregator
 
-An API gateway that provides rate limiting and caching for configurable endpoints.
+An API gateway that provides rate limiting and caching for configurable endpoints. It has certain advantages over connecting directly to the endpoints from each application:
+- Centralised API key management
+- API keys are hidden from gateway clients
+- **Shared** web cache that stores HTTP(S) responses for re-use
+- Rate limits can be applied to **remote** endpoints to enforce API free usage limits or to "protect" the endpoint from unintended abuse.
 
-It has been designed to be:
+This gateway has been designed to be:
 - easily configurable
 - fairly minimal
-- used by other applications within an internal network.
+- used by multiple applications within an internal network
 
-Note that this gateway does not provide any authentication or authorisation for the endpoints.  Take a look at at [express gateway](https://www.express-gateway.io/) if you need advanced features.
+## Limitations
+
+- Caching is only done in memory, as is rate limiting. A server restart will obliterate all state.
+- This gateway does not provide any authentication or authorisation for the endpoints.  Take a look at at [express gateway](https://www.express-gateway.io/) if you need advanced features.
 
 ## Running locally
 
@@ -23,6 +30,10 @@ npm start
 The app should now be running on [localhost:3080](http://localhost:3080).
 
 You can see a list of the available endpoints in the browser. The endpoints are disabled by default.
+
+## Running with Docker
+
+A Dockerfile is provided. Documentation to come.
 
 ## Configuring
 
