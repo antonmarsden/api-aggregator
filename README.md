@@ -14,7 +14,7 @@ This gateway has been designed to be:
 ## Limitations
 
 - Caching is only done in memory, as is rate limiting. A server restart will obliterate all state.
-- This gateway does not provide any authentication or authorisation for the endpoints.  Take a look at at [express gateway](https://www.express-gateway.io/) if you need advanced features.
+- This gateway does not provide any authentication or authorisation for the gateway clients.  Take a look at at [express gateway](https://www.express-gateway.io/) if you need advanced features.
 
 ## Running locally
 
