@@ -1,7 +1,7 @@
 {
   "name": "api-aggregator",
   "version": "1.0.0",
-  "repository": "",
+  "repository": "antonmarsden:api-aggregator",
   "description": "An API gateway that provides rate limiting and caching for configurable endpoints",
   "main": "app.js",
   "scripts": {
