@@ -1,0 +1,36 @@
+{
+  "name": "api-aggregator",
+  "version": "1.0.0",
+  "repository" : "",
+  "description": "An API gateway that provides rate limiting and caching for configurable endpoints",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "debug": "DEBUG=* node app.js",
+    "eslint": "eslint app.js lib/*.js"
+  },
+  "author": "Anton Marsden <anton.marsden@ninetyten.co.nz> (https://www.ninetyten.co.nz)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "clone-response": "^1.0.2",
+    "config": "^1.30.0",
+    "debug": "^3.1.0",
+    "duplexify": "^3.5.4",
+    "get-stream": "^3.0.0",
+    "http-cache-semantics": "^3.8.1",
+    "keyv": "^3.0.0",
+    "limiter": "^1.1.2",
+    "lowercase-keys": "^1.0.1",
+    "mustache": "^2.3.0",
+    "node-http-error": "^2.0.0",
+    "normalize-url": "^2.0.1",
+    "pixl-xml": "^1.0.13",
+    "responselike": "^1.0.2",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "eslint": "^4.19.1",
+    "opener": "^1.4.3"
+  }
+}

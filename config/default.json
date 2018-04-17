@@ -1,0 +1,88 @@
+{
+  "ApiAggregator" : {
+    "listenPort" : 3080,
+    "usageTemplateFile" : "templates/usage.html",
+    "pipes" : {
+      "api.publicapis.org" : {
+        "serviceName" : "Public APIs API",
+        "targetEndpoint" : "https://api.publicapis.org/",
+        "localEndpoint" : "/api.publicapis.org/",
+        "documentationUrl" : "https://api.publicapis.org/",
+        "examples" : {
+          "Categories" : "categories",
+          "Entries" : "entries"
+        }
+      },
+      "api.met.no" : {
+        "serviceName" : "MET Norway Weather API v.3",
+        "targetEndpoint" : "https://api.met.no/weatherapi/",
+        "localEndpoint" : "/api.met.no/",
+        "documentationUrl" : "https://api.met.no/weatherapi/",
+        "examples" : {
+          "Location Forecast" : "locationforecast/1.9/?lat=60.10&lon=9.58&msl=70"
+        },
+        "rateLimit" : {
+          "tokensPerInterval" : 20,
+          "interval" : "second"
+        }
+      },
+      "api.met.no-json" : {
+        "serviceName" : "MET Norway (JSON transform)",
+        "targetEndpoint" : "/api.met.no/",
+        "localEndpoint" : "/api.met.no-json/",
+        "documentationUrl" : "https://api.met.no/weatherapi/",
+        "convertXmlToJson" : true,
+        "disableCache" : true,
+        "examples" : {
+          "Location Forecast" : "locationforecast/1.9/?lat=60.10&lon=9.58&msl=70"
+        }
+      },
+      "geonames.org" : {
+        "serviceName" : "GeoNames",
+        "targetEndpoint" : "https://secure.geonames.org/",
+        "localEndpoint" : "/geonames.org/",
+        "documentationUrl" : "http://www.geonames.org/export/ws-overview.html",
+        "requestArgs" : {
+          "username" : null
+        },
+        "rateLimit" : {
+          "tokensPerInterval" : 1000,
+          "interval" : "hour"
+        },
+        "examples" : {
+          "Cities" : "citiesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&lang=en"
+        }
+      },
+      "ipvigilante.com" : {
+        "serviceName" : "IP Vigilante",
+        "targetEndpoint" : "https://ipvigilante.com/json/",
+        "localEndpoint" : "/ipvigilante.com/",
+        "documentationUrl" : "https://www.ipvigilante.com/api-developer-docs/",
+        "examples" : {
+          "8.8.8.8" : "8.8.8.8"
+        }
+      },
+      "datakick.org" : {
+        "serviceName" : "Datakick Open Product Database",
+        "targetEndpoint" : "https://www.datakick.org/api/",
+        "localEndpoint" : "/datakick.org/",
+        "documentationUrl" : "https://www.datakick.org/api",
+        "examples" : {
+          "Item" : "items/000000000000"
+        }
+      },
+      "maps.googleapis.com" : {
+        "serviceName" : "Google Maps API",
+        "targetEndpoint" : "https://maps.googleapis.com/maps/api/",
+        "localEndpoint" : "/maps.googleapis.com/",
+        "documentationUrl" : "https://developers.google.com/maps/documentation/",
+        "requestArgs" : {
+          "key" : null
+        },
+        "examples" : {
+          "Static Map" : "staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284"
+        }
+      }
+    }
+  }
+}
