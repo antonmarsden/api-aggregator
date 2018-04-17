@@ -37,18 +37,15 @@ A Dockerfile is provided. Documentation to come.
 
 ## Configuring
 
-To activate an endpoint, you can create a new configuration override file (e.g., **config/local.json**). The content could look something like this:
+To modify the configuration, you can use the various available in the
+[config module](http://lorenwest.github.io/node-config/).
+An easy way to start is to create a new configuration override file called **config/local.json**.
+The content might look something like this:
 
 ```
 {
   "ApiAggregator" : {
     "pipes" : {
-      "api.publicapis.org" : {
-        "enabled" : true
-      },
-      "ipvigilante.com" : {
-        "enabled" : true
-      },
       "geonames.org" : {
         "enabled" : true,
         "requestArgs" : {
@@ -60,7 +57,7 @@ To activate an endpoint, you can create a new configuration override file (e.g.,
 }
 ```
 
-In some cases you will need to define extra request arguments (usually API keys) so that the remote API server can identify you. The **geonames.org** API is an example of this, so you should replace the **demo** username with your own username (you can apply for one [here](http://www.geonames.org/login)).
+In some cases you will need to define extra request arguments (usually API keys) so that the remote API server can identify you. The **geonames.org** API is an example of this, so you should replace the **demo** username above with your own username (you can apply for one [here](http://www.geonames.org/login)).
 
 You will need to restart the server for the configuration changes to take effect.
 
@@ -70,6 +67,7 @@ You can create your own endpoints by following the patterns given in default.jso
 
 Beyond the basic local to remote URL mapping, the following capabilities are provided:
 - Mapping a local endpoint to another local endpoint (see the **api.met.no-json** definition for an example).
+- Enabling and disabling of endpoints (enabled by default).
 - Caching of responses, enabled by default. You can disable the cache on an endpoint using **disableCache : false**.
 - Basic rate limiting, e.g,
 ```
@@ -79,4 +77,4 @@ Beyond the basic local to remote URL mapping, the following capabilities are pro
 }
 ```
 - Transforming XML to JSON. Note that the current implementation stores the raw response (XML) in the cache rather than the transformed data (JSON).
-- API usage examples can be provided and will appear on the main page if the endpoint is enabled.
+- API usage examples can be provided within the JSON configuration, and will appear on the main page if the endpoint is enabled.

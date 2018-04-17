@@ -42,6 +42,7 @@
         "targetEndpoint" : "https://secure.geonames.org/",
         "localEndpoint" : "/geonames.org/",
         "documentationUrl" : "http://www.geonames.org/export/ws-overview.html",
+        "enabled" : false,
         "requestArgs" : {
           "username" : null
         },
@@ -76,6 +77,7 @@
         "targetEndpoint" : "https://maps.googleapis.com/maps/api/",
         "localEndpoint" : "/maps.googleapis.com/",
         "documentationUrl" : "https://developers.google.com/maps/documentation/",
+        "enabled" : false,
         "requestArgs" : {
           "key" : null
         },
