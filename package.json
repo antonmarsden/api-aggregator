@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node app.js",
     "debug": "DEBUG=* node app.js",
-    "eslint": "eslint app.js lib/*.js"
+    "eslint": "eslint app.js lib/*.js",
+    "test": "mocha"
   },
   "author": "Anton Marsden <anton.marsden@ninetyten.co.nz> (https://www.ninetyten.co.nz)",
   "license": "Apache-2.0",
@@ -19,7 +20,7 @@
     "get-stream": "^3.0.0",
     "http-cache-semantics": "^3.8.1",
     "keyv": "^3.0.0",
-    "limiter": "^1.1.2",
+    "limiter": "^1.1.3",
     "lowercase-keys": "^1.0.1",
     "mustache": "^2.3.0",
     "node-http-error": "^2.0.0",
@@ -29,6 +30,8 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "mocha": "^5.1.0"
   }
 }
