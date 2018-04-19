@@ -63,3 +63,6 @@ typings/
 # local config files
 config/local.json
 config/production.json
+
+# bin directory
+bin/
