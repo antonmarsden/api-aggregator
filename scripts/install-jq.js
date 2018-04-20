@@ -43,6 +43,9 @@ const DOWNLOAD_MAP = {
   "linux": {
     "def": "jq-linux64"
   },
+  "darwin": {
+    "def": "jq-osx-amd64"
+  },
   "win32": {
     "def": "jq-win32.exe",
     "x64": "jq-win64.exe"
