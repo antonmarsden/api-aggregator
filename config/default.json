@@ -26,7 +26,7 @@
           "interval" : "second"
         },
         "jqFilters" : {
-          "simpleLocationForecast" : "{meta,data : [.product.time[]|{from,to}+(.location|del(.latitude)|del(.longitude)|del(.altitude)|del(.windSpeed.name))]}"
+          "simpleLocationForecast" : "{meta,data : [.product.time[]|del(..|.id?)|{from,to}+(.location|del(.latitude)|del(.longitude)|del(.altitude)|del(.windSpeed.name))]}"
         }
       },
       "api.met.no-json" : {
