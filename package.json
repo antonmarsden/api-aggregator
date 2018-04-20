@@ -5,17 +5,23 @@
   "description": "An API gateway that provides rate limiting and caching for configurable endpoints",
   "main": "app.js",
   "scripts": {
+    "install-jq": "node scripts/install-jq.js",
     "start": "node app.js",
     "debug": "DEBUG=* node app.js",
     "eslint": "eslint app.js lib/*.js",
-    "test": "mocha"
+    "test": "mocha",
+    "pretest": "npm run install-jq",
+    "postinstall": "npm run install-jq"
   },
   "author": "Anton Marsden <anton.marsden@ninetyten.co.nz> (https://www.ninetyten.co.nz)",
   "license": "Apache-2.0",
   "dependencies": {
+    "bin-build": "^3.0.0",
     "clone-response": "^1.0.2",
     "config": "^1.30.0",
     "debug": "^3.1.0",
+    "download": "^6.2.5",
+    "duplex-child-process": "0.0.5",
     "duplexify": "^3.5.4",
     "get-stream": "^3.0.0",
     "http-cache-semantics": "^3.8.1",
@@ -27,11 +33,12 @@
     "normalize-url": "^2.0.1",
     "pixl-xml": "^1.0.13",
     "responselike": "^1.0.2",
+    "tempfile": "^2.0.0",
     "through2": "^2.0.3"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
-    "mocha": "^5.1.0"
+    "mocha": "^5.1.1"
   }
 }

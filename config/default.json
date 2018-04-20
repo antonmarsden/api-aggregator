@@ -24,6 +24,9 @@
         "rateLimit" : {
           "tokensPerInterval" : 20,
           "interval" : "second"
+        },
+        "jqFilters" : {
+          "simpleLocationForecast" : "{meta,data : [.product.time[]|{from,to}+(.location|del(.latitude)|del(.longitude)|del(.altitude)|del(.windSpeed.name))]}"
         }
       },
       "api.met.no-json" : {

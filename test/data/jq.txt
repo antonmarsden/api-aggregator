@@ -1,0 +1,1 @@
+{meta,data : [.product.time[]|{from,to}+(.location|del(.latitude)|del(.longitude)|del(.altitude)|del(.windSpeed.name))]}
