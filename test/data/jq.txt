@@ -1,1 +1,1 @@
-{meta,data : [.product.time[]|{from,to}+(.location|del(.latitude)|del(.longitude)|del(.altitude)|del(.windSpeed.name))]}
+{meta,data : [.product.time[]|del(..|.id?)|{from,to}+(.location|del(.latitude)|del(.longitude)|del(.altitude)|del(.[].name)|del(.[].beaufort) | with_entries(.value |= [.[]|tonumber?][0]? )  )]}
