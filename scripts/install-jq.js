@@ -40,6 +40,9 @@ if (jqExists()) {
 
 // if platform is missing, download source instead of executable
 const DOWNLOAD_MAP = {
+  "linux": {
+    "def": "jq-linux64"
+  },
   "win32": {
     "def": "jq-win32.exe",
     "x64": "jq-win64.exe"
