@@ -16,6 +16,7 @@
       <th>Service Name</th>
       <th>Local endpoint</th>
       <th>Remote endpoint</th>
+      <th>JQ Filters</th>
       <th>Examples</th>
     </thead>
     <tbody>
@@ -25,6 +26,7 @@
         <td>{{serviceName}} (<a href="{{documentationUrl}}">docs</a>)</td>
         <td>{{localEndpoint}}</td>
         <td>{{targetEndpoint}}</td>
+        <td>{{#jqFilters}}{{name}}<br/>{{/jqFilters}}</td>
         <td>{{#enabled}}{{#examples}}<a href="{{localEndpoint}}{{url}}" target="_blank">{{name}}</a><br/>{{/examples}}{{/enabled}}
       </tr>
       {{/.}}
