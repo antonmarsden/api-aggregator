@@ -2,7 +2,8 @@
 
 An API gateway that provides rate limiting and caching for configurable endpoints. It has certain advantages over connecting directly to the endpoints from each application:
 - Centralised API key management
-- API keys are hidden from gateway clients
+- API keys (in the request args) are hidden from gateway clients
+- Basic authentication against the API server is supported (see the frost.met.no example)
 - **Shared** web cache that stores HTTP(S) responses for re-use
 - Rate limits can be applied to **remote** endpoints to enforce API free usage limits or to "protect" the endpoint from unintended abuse.
 - [JQ filters](https://stedolan.github.io/jq/) can be defined and applied to JSON before the client receives the response.
@@ -15,7 +16,7 @@ This gateway has been designed to be:
 ## Limitations
 
 - Caching is only done in memory, as is rate limiting. A server restart will obliterate all state.
-- This gateway does not provide any authentication or authorisation for the gateway clients.  Take a look at at [express gateway](https://www.express-gateway.io/) if you need advanced features.
+- This gateway does not provide authentication or authorisation for the gateway clients.  Take a look at at [express gateway](https://www.express-gateway.io/) if you need advanced features.
 
 ## Running locally
 
