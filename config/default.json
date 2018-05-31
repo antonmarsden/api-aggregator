@@ -40,6 +40,19 @@
           "Location Forecast" : "locationforecast/1.9/?lat=60.10&lon=9.58&msl=70"
         }
       },
+      "frost.met.no" : {
+        "serviceName" : "Frost API",
+        "targetEndpoint" : "https://frost.met.no/",
+        "localEndpoint" : "/frost.met.no/",
+        "documentationUrl" : "https://frost.met.no/reference",
+        "enabled" : false,
+        "extraHeaders" : {
+          "Authorization" : null
+        },
+        "examples" : {
+          "locations" : "locations/v0.jsonld?geometry=POINT%20(30%2030)"
+        }
+      },
       "geonames.org" : {
         "serviceName" : "GeoNames",
         "targetEndpoint" : "https://secure.geonames.org/",
