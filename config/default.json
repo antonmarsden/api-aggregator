@@ -50,7 +50,7 @@
           "Authorization" : null
         },
         "examples" : {
-          "locations" : "locations/v0.jsonld?geometry=POINT%20(30%2030)"
+          "elements" : "elements/v0.jsonld?fields=id,oldElementCodes,category,name,description,unit,sensorLevelType,sensorLevelUnit,sensorLevelDefaultValue,sensorLevelValues,cmMethod,cmMethodDescription,cmInnerMethod,cmInnerMethodDescription,status&lang=en-US"
         }
       },
       "geonames.org" : {
